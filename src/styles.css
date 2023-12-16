@@ -1,6 +1,11 @@
 body {
   font-family: "Heebo", sans-serif;
+  display: block;
+  margin: 0 auto;
+  width: 349px;
+  height: 620px;
 }
 .background {
-  background-image: url("images/frontt.jpg");
+  background-image: url("../images/frontt.jpg");
+  height: 620px;
 }
