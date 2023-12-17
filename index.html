@@ -3,70 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather-App</title>
+    <link rel="stylesheet" href="src/styling.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@1,200&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" href="src/styles.css" />
+    <title>☁️App</title>
   </head>
   <body>
-    <div class="background">
+    <div class="weather-app">
       <header>
-        <div id="date"></div>
-        <div>
-          <h1 id="city">Paris</h1>
-          <div id="current-temp"></div>
-          <div class="container-weather">
-            <div>Humidity: <span id="Humidity"></span></div>
-            <div>Wind: <span id="Wind"></span></div>
-            <div>Precipitation: <span id="precipitation"></span></div>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"></span>, <span id="description"></span> <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature">12</div>
+            <div class="weather-app-unit">°C</div>
           </div>
         </div>
       </header>
       <main>
-        <form>
-          <input
-            type="search"
-            placeholder="🌍 Search location..."
-            autofocus="on"
-            class="search-bar"
-          />
-          <input type="submit" value="Search" class="button" />
-        </form>
-        <div class="outer-container">
-          <div class="container">
-            <div class="box">
-              <h2 id="temp1">22°C|F</h2>
-              <h3 id="week-day1">wednesday</h3>
-            </div>
-            <div class="box">
-              <h2 id="temp2">22°C|F</h2>
-              <h3 id="week-day2">wednesday</h3>
-            </div>
-            <div class="box">
-              <h2 id="temp3"><span>22</span> <span>°C</span></h2>
-              <h3 id="week-day3">wednesday</h3>
-            </div>
-          </div>
+        <div class="searching-city">
+          <form class="search-form" id="search-form">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              required
+              class="search-form-input"
+              id="search-form-input"
+            />
+            <input type="submit" value="search" class="search-form-button" />
+          </form>
         </div>
+        <div class="weather-forecast" id="forecast"></div>
       </main>
-      <footer>
-        <div class="credit">
-          <p>
-            This project was coded by
-            <a href="https://github.com/taissir-l" target="_blank">Taissir</a>
-            and is
-            <a href="https://github.com/taissir-l/Weather_App" target="_blank">
-              on GitHub</a
-            >
-            and
-            <a href="#" target="_blank">hosted on Netlify</a>
-          </p>
-        </div>
+
+      <footer class="credit">
+        This project was coded by
+        <a href="https://github.com/taissir-l" target="_blank"
+          >Taissir Lassoued</a
+        >
+        , code hosted on
+        <a href="https://github.com/taissir-l/Weather_App" target="_blank"
+          >Github</a
+        >
+        and website hosted
+        <a href="https://darling-malasada-9c22c1.netlify.app" target="_blank"
+          >on Netlify</a
+        >
       </footer>
     </div>
     <script src="src/index.js"></script>
