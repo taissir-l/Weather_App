@@ -84,7 +84,7 @@ main {
   display: flex;
   position: absolute;
   bottom: 390px;
-  left: 450px;
+  left: 150px;
 }
 .weather-app-icon {
   color: #1b1540;
